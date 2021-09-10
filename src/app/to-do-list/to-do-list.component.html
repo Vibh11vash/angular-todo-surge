@@ -30,7 +30,7 @@
               <hr class="my-4">
   
   
-              <ul class="list-group list-group-horizontal rounded-0 bg-transparent" *ngFor="let item of myList; let i = index">
+              <ul class="list-group list-group-horizontal rounded-0 bg-transparent" *ngFor="let item of myList.slice().reverse(); let i = index">
                 <li class="list-group-item d-flex rounded-0 border-0 bg-transparent">
                   <div class="form-check">
                     <input
@@ -40,7 +40,8 @@
                       value=""
                       id="flexCheckChecked1"
                       aria-label="..."
-                      checked
+                      [checked] = 'item.isChecked'
+                      (change) = checktask(i);
                     />
                   </div>
                 </li>
@@ -53,8 +54,8 @@
                       <p class="small mb-0">{{item.date | date:'short'}}</p></a>
                   </div>
                   <div class="d-flex flex-row align-items-center justify-content-end mb-1 icon-wrapper">
-                    <a href="#!" class="text-info mx-2" data-mdb-toggle="tooltip" title="Edit todo"><i  class="fa fa-pencil" aria-hidden="true"></i></a>
-                    <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i (click)="deleteTask(i)" class="fa fa-trash" aria-hidden="true"></i></a>
+                    <a href="#!" class="text-info mx-2" data-mdb-toggle="tooltip" title="Edit todo"><i  (click)="edit(myList.length -i-1)"  class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i (click)="deleteTask(myList.length -i-1)" class="fa fa-trash" aria-hidden="true"></i></a>
                   </div>
 
                 </li>

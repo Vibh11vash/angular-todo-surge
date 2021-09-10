@@ -40,14 +40,33 @@ export class ToDoListComponent implements OnInit {
       this.myList = JSON.parse(localStorage.getItem('list')|| '{}');
     }
   }
-  editTask(index:number){
 
-
-  }
   deleteTask(index:number){
     this.getData();
     this.myList.splice(index, 1);
     localStorage.setItem('list', JSON.stringify(this.myList));
+
+  }
+  checktask(index:number){
+    this.getData()
+    if(this.myList[index].isChecked){
+      this.myList[index].isChecked = false
+    }else{
+      this.myList[index].isChecked = true
+    }
+    localStorage.setItem('list', JSON.stringify(this.myList));
+
+  }
+  edit(index:number){
+    this.getData()
+    this.myForm.patchValue(this.myList[index])
+    if(this.myForm.value.task){
+      this.myList.splice(index, 1);
+
+      localStorage.setItem('list', JSON.stringify(this.myList));
+
+    }
+
 
   }
   keyDownFunction(event:any) {
