@@ -1,0 +1,22 @@
+img.userImage {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+tr td{
+    vertical-align: middle;
+    text-align: center;
+
+}
+.page-link{
+    cursor: pointer;
+}
+.pagination{
+    justify-content: center;
+}
+tr{
+    text-align: center;
+}
+.page-button-wrapper{
+    color: red;
+}

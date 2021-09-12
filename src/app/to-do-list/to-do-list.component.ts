@@ -58,14 +58,16 @@ export class ToDoListComponent implements OnInit {
 
   }
   edit(index:number){
+    if(this.myForm.value.task){
+      return
+    }
     this.getData()
     this.myForm.patchValue(this.myList[index])
-    if(this.myForm.value.task){
-      this.myList.splice(index, 1);
 
-      localStorage.setItem('list', JSON.stringify(this.myList));
+    this.myList.splice(index, 1);
 
-    }
+    localStorage.setItem('list', JSON.stringify(this.myList));
+
 
 
   }

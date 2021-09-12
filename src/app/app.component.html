@@ -1,2 +1,12 @@
-
-<app-to-do-list></app-to-do-list>
+<div class="container">
+    <div class="row m-5">
+        <div class="col-md-6 nav-button">
+            <button  routerLink="/to-do-list" routerLinkActive='active' type="button" class="btn btn-lg">To-Do-List</button>
+        </div>
+        <div class="col-md-6 nav-button">
+            <button routerLink="/user-list" routerLinkActive='active' type="button" class="btn  btn-lg">Large button</button>    
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<!-- <app-to-do-list></app-to-do-list> -->

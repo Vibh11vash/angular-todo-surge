@@ -1,0 +1,14 @@
+
+.nav-button{
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+.btn.active{
+    background-color: #0000ff8f;
+    border: #0000ff8f;
+}
+.btn{
+    background-color: #8080808c;
+    border: #8080808c;
+}

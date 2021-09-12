@@ -1,4 +1,4 @@
-<section class="vh-100">
+<section style="max-height: 800px;" class="vh-100">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
@@ -41,7 +41,7 @@
                       id="flexCheckChecked1"
                       aria-label="..."
                       [checked] = 'item.isChecked'
-                      (change) = checktask(i);
+                      (change) = "checktask(myList.length -i-1)"
                     />
                   </div>
                 </li>
