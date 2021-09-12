@@ -11,3 +11,7 @@
   .icon-wrapper i{
     font-size: 18px;
   }
+  .list-wrapper{
+    max-height: 300px;
+    overflow: auto;
+}
