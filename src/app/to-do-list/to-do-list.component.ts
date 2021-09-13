@@ -24,6 +24,9 @@ export class ToDoListComponent implements OnInit {
 
   }
   addTask(){
+    if(this.myForm.invalid){
+      return
+    }
     this.myForm.patchValue({
       date : new Date(),
       isChecked : false
