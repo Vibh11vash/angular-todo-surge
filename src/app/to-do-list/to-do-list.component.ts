@@ -74,11 +74,7 @@ export class ToDoListComponent implements OnInit {
 
 
   }
-  keyDownFunction(event:any) {
-    if (event.keyCode === 13) {
-      this.addTask()
-    }
-  }
+
 
   pushData(){
     let a =[]

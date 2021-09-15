@@ -13,7 +13,7 @@
               <div class="pb-2">
                 <div class="card">
                   <div class="card-body">
-                      <form  (keydown)="keyDownFunction($event)" [formGroup]="myForm" >
+                      <form  (keyup.enter)="addTask()" [formGroup]="myForm" >
                         <div class="d-flex flex-row align-items-center" >
                             <input formControlName="task" type="text" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="Add new...">
                             <a  data-mdb-toggle="tooltip" title="Set due date"><i class="fas fa-calendar-alt fa-lg me-3"></i></a>
